@@ -4,25 +4,23 @@ using System.Text;
 
 namespace Zoo.Classes
 {
-    class Panda : Herbivore
+    class Rhino : Herbivore
     {
         public override int Cuteness { get { return Affection; } set { Affection += value; } }
 
         public override void Eat()
         {
-            Cuteness += 100;
+            Cuteness += 10;
         }
 
         public override void Sleep()
         {
-            Cuteness += 1000;
+            Cuteness += 100;
         }
 
         public override void Sound()
         {
-            Console.WriteLine("Panda: ...");
+            Console.WriteLine("Rhino: ARGHH");
         }
-
-        public override int Affection { get { return Affection + 20; } set { Affection = value; } }
     }
 }
