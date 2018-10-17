@@ -4,23 +4,27 @@ using System.Text;
 
 namespace Zoo.Classes
 {
-    class Fox : Carnivore
+    public class Fox : Carnivore
     {
-        public override int Bite { get { return Teeth; } set { Teeth = value; } }
-        
-        public override void Eat()
+        public override int Bite { get { return Strength + 50; } }
+
+        public override int Teeth { get => 25; }
+
+        public override int Attack()
         {
-            Bite += 40;
+            return Bite * Teeth;
         }
 
-        public override void Sleep()
+        public override int Eat()
         {
-            Bite = 0;
+            Hunger = 25;
+            return Hunger;
+
         }
 
         public override void Sound()
         {
-            Console.WriteLine("Fox: WRAHHHH");
+            Console.WriteLine("FOX: AHHWOOO");
         }
     }
 }

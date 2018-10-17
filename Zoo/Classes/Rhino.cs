@@ -4,23 +4,32 @@ using System.Text;
 
 namespace Zoo.Classes
 {
-    class Rhino : Herbivore
+    public class Rhino : Herbivore
     {
-        public override int Cuteness { get { return Affection; } set { Affection += value; } }
+        // override Abstract properties from Animal class
+        public override int Cuteness { get { return Cuteness; } set { Cuteness = value; } }
 
-        public override void Eat()
+        // override Abstract method from Animal class
+        public override int Eat()
         {
-            Cuteness += 10;
+            Hunger = 50;
+            return Hunger;
         }
 
-        public override void Sleep()
+        // override Abstract method from Animal class
+        public override int Attack()
         {
-            Cuteness += 100;
+            Strength = 1000;
+            return Strength;
         }
 
+        // override Abstract method from Animal class
         public override void Sound()
         {
-            Console.WriteLine("Rhino: ARGHH");
+            Console.WriteLine("Rhino: ...");
         }
+
+        // override virtual properties from Animal class
+        public override int Affection { get { return Affection + 2000; } set { Affection = value; } }
     }
 }

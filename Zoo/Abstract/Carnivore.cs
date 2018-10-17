@@ -4,11 +4,11 @@ using System.Text;
 
 namespace Zoo.Classes
 {
-    abstract class Carnivore : Animal
+    public abstract class Carnivore : Animal
     {
-        public virtual int Teeth { get; set; }
+        public virtual int Teeth { get; }
 
-        public abstract int Bite { get; set; }
+        public abstract int Bite { get; }
 
         public virtual bool Catch(int affection)
         { 

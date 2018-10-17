@@ -4,16 +4,16 @@ using System.Text;
 
 namespace Zoo.Classes
 {
-    abstract class Animal
+    public abstract class Animal
     {
-        string Name;
-
         public virtual int Strength { get; set; }
 
-        public abstract void Eat();
+        public virtual int Hunger { get; set; }
+
+        public abstract int Eat();
+
+        public abstract int Attack();
 
         public abstract void Sound();
-
-        public abstract void Sleep();
     }
 }
