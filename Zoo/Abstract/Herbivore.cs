@@ -1,18 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Zoo.Abstract;
 
 namespace Zoo.Classes
 {
     public abstract class Herbivore : Animal
     {
-        public virtual int Affection { get; set; }
+        public virtual int Cutness { get; set; }
 
-        public abstract int Cuteness { get; set; }
+        public virtual int Happniess { get; set; }
 
-        public virtual int Pose()
+        public virtual int Affection()
         {
-            return Affection + 20;
+            return 100;
+        }
+
+        public virtual int Defense()
+        {
+            return 50;
+        }
+
+        public string Eat()
+        {
+            return "I eat vegetable";
         }
     }
 }
