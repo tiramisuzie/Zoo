@@ -1,35 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Zoo.Interfaces;
 
 namespace Zoo.Classes
 {
-    public class Panda : Herbivore
+    public class Panda : Herbivore, ISleep
     {
-        // override Abstract properties from Animal class
-        public override int Cuteness { get { return Cuteness; } set { Cuteness = value; } }
+        // override virtual property from herbivore
+        public override int Happniess { get => 1000; set => Happniess = value; }
+        
+        // override virtual property from herbivore
+        public override int Cutness { get => 1000; set => Cutness = value; }
 
-        // override Abstract method from Animal class
-        public override int Eat()
+        // property from ISleep
+        public bool Asleep { get => true; set => Asleep = value; }
+
+        // override virtual method from herbivore
+        public override int Defense()
         {
-            Hunger = 0;
-            return Hunger;
+            return 1000;
         }
 
-        // override Abstract method from Animal class
-        public override int Attack()
+        // override virtual method from herbivore
+        public override int Affection()
         {
-            Strength = 1;
-            return Strength;
+            return 1000;
         }
 
-        // override Abstract method from Animal class
-        public override void Sound()
+        public string Name()
         {
-            Console.WriteLine("Panda: ...");
+            return "I am pandee";
         }
 
-        // override virtual properties from Animal class
-        public override int Affection { get { return Affection + 2000; } set { Affection = value; } }
+        // method from ISleep
+        public string Nap()
+        {
+            return "ZZZZZZ";
+        }
     }
 }

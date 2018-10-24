@@ -6,25 +6,18 @@ namespace Zoo.Classes
 {
     public class Tiger : Carnivore
     {
-        public override int Bite { get { return Strength + 9000; } }
+        // abstract property from Carnivore
+        public override int Teeth { get => 100; set => Teeth = value; }
 
-        public override int Teeth { get => 9000; }
-
-        public override int Attack()
+        // abstract method from carnivore
+        public override int Aggression()
         {
-            return Bite * Teeth;
+            return 100;
         }
 
-        public override int Eat()
+        public string name()
         {
-            Hunger = 60;
-            return Hunger;
-
-        }
-
-        public override void Sound()
-        {
-            Console.WriteLine("Tiger: RAWR");
+            return "I am tig";
         }
     }
 }
