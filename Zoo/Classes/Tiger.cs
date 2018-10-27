@@ -1,30 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Zoo.Interfaces;
 
 namespace Zoo.Classes
 {
-    public class Tiger : Carnivore
+    public class Tiger : Carnivore, ISleep
     {
-        public override int Bite { get { return Strength + 9000; } }
+        // abstract property from Carnivore
+        public override int Teeth { get => 100; set => Teeth = value; }
 
-        public override int Teeth { get => 9000; }
+        // property from ISleep
+        public bool Asleep { get => true; set => Asleep = value; }
 
-        public override int Attack()
+        // abstract method from carnivore
+        public override int Aggression()
         {
-            return Bite * Teeth;
+            return 100;
         }
 
-        public override int Eat()
+        public string name()
         {
-            Hunger = 60;
-            return Hunger;
-
+            return "I am tig";
         }
 
-        public override void Sound()
+        // Method from ISleep
+        public string Nap()
         {
-            Console.WriteLine("Tiger: RAWR");
+            return "ZZZZZZ";
         }
     }
 }

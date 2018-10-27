@@ -1,30 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Zoo.Interfaces;
 
 namespace Zoo.Classes
 {
-    public class Fox : Carnivore
+    public class Fox : Carnivore, IHunt
     {
-        public override int Bite { get { return Strength + 50; } }
+        // override abstract property from Carnivore
+        public override int Teeth { get => 50; set => Teeth = value; }
 
-        public override int Teeth { get => 25; }
+        // property from IHunt interface
+        public int Energy { get => 50; set => Energy = value; }
 
-        public override int Attack()
+        // override abstract method from Carnivore
+        public override int Aggression()
         {
-            return Bite * Teeth;
+            return 0;
         }
 
-        public override int Eat()
+        // my method
+        public string name()
         {
-            Hunger = 25;
-            return Hunger;
-
+            return "I am a Fox";
         }
 
-        public override void Sound()
+        // method from IHunt interface
+        public string Weapon()
         {
-            Console.WriteLine("FOX: AHHWOOO");
+            return "teeth and claws";
         }
     }
 }
