@@ -20,21 +20,5 @@ namespace XUnitTestProject2
             var result = panda.Health();
             Assert.Equal(100, result);
         }
-
-        [Fact]
-        public void ShouldReturnNapInISleep()
-        {
-            Panda panda = new Panda();
-            var result = panda.Nap();
-            Assert.Equal("ZZZZZZ", result);
-        }
-
-        [Fact]
-        public void ShouldReturnAsleepInISleep()
-        {
-            Panda panda = new Panda();
-            var result = panda.Asleep;
-            Assert.True(result);
-        }
     }
 }

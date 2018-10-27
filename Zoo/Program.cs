@@ -9,7 +9,7 @@ namespace Zoo
         {
             Console.WriteLine("Fox");
             Fox fox = new Fox();
-            Console.WriteLine("from carnivore");
+            Console.WriteLine("from Carnivore");
             Console.WriteLine(fox.Eat());
             Console.WriteLine("from Animal");
             Console.WriteLine(fox.Health());
@@ -22,20 +22,20 @@ namespace Zoo
 
             Console.WriteLine("Panda");
             Panda panda = new Panda();
-            Console.WriteLine("from herbivore");
+            Console.WriteLine("from Herbivore");
             Console.WriteLine(panda.Eat());
             Console.WriteLine("from Animal");
             Console.WriteLine(panda.Health());
             Console.WriteLine("from DemiGod");
             Console.WriteLine(panda.SuperPower());
-            Console.WriteLine("from ISleep");
-            Console.WriteLine(panda.Nap());
 
             Console.WriteLine();
 
             Console.WriteLine("Tiger");
             Tiger tiger = new Tiger();
-            Console.WriteLine("from carnivore");
+            Console.WriteLine("from ISleep");
+            Console.WriteLine(tiger.Nap());
+            Console.WriteLine("from Carnivore");
             Console.WriteLine(tiger.Eat());
             Console.WriteLine("from Animal");
             Console.WriteLine(tiger.Health());
@@ -48,7 +48,7 @@ namespace Zoo
             Youkai youkai = new Youkai();
             Console.WriteLine("from Panda");
             Console.WriteLine(youkai.Name());
-            Console.WriteLine("from herbivore");
+            Console.WriteLine("from Herbivore");
             Console.WriteLine(youkai.Eat());
             Console.WriteLine("from Animal");
             Console.WriteLine(youkai.Health());

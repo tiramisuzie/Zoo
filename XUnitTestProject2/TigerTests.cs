@@ -20,5 +20,21 @@ namespace XUnitTestProject2
             var result = tiger.SuperPower();
             Assert.Equal("Magic", result);
         }
+
+        [Fact]
+        public void ShouldReturnNapInISleep()
+        {
+            Tiger tiger = new Tiger();
+            var result = tiger.Nap();
+            Assert.Equal("ZZZZZZ", result);
+        }
+
+        [Fact]
+        public void ShouldReturnAsleepInISleep()
+        {
+            Tiger tiger = new Tiger();
+            var result = tiger.Asleep;
+            Assert.True(result);
+        }
     }
 }
