@@ -12,6 +12,9 @@ Create a zoo hierarchy class structure that uses all four principles of object-o
 
 ## Diagram 
 ![Zoo Diagram](/assets/zooDiagram.PNG)
+
+## Sample View
+![sameple view](/assets/screenshot.PNG)
 ## Object-Oriented Programming Principles
 Abstraction - Break down into smaller components such as classes that are used to describe the characteristics of an object 
 Polymorphism - This allows multiple methods to exist but with different functionality
